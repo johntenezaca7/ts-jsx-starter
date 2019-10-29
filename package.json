@@ -1,0 +1,26 @@
+{
+  "name": "ts-js-starter",
+  "version": "1.0.0",
+  "description": "Typescript with RxJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify-es": "^2.0.0",
+    "ts-loader": "^6.1.0",
+    "typescript": "^3.6.3",
+    "webpack": "^4.40.2",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "@types/node": "^12.11.7",
+    "rxjs": "^6.5.3"
+  },
+  "author": "John Tenezaca",
+  "license": "ISC"
+}
