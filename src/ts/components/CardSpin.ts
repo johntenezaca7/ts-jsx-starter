@@ -10,19 +10,19 @@ class Card {
   constructor(card:Element) {
     this.card = card;
 
-    this.initClicks(this.card);
-    this.initSpin();
+    this.initClicks(this.card).subscribe();
+    // this.initSpin();
   };
 
-  initClicks(card:Element):void {
-    this.clicks$ = fromEvent(card, "click").pipe(
+  initClicks(card:Element) {
+    return this.clicks$ = fromEvent(card, "click").pipe(
       tap(ev => this.card.classList.toggle('is-flipped'))
     );
   };
-  
+
   initSpin():void {
     this.spin$ = interval(2000).pipe(
-      switchMap(ev => this.clicks$)
+      switchMap(() => this.clicks$)
     );
   };
 
